@@ -86,7 +86,8 @@ Events
 Location
 
 
-
+Packages Used:
+--------------
 twbs:bootstrap: The most popular front-end framework for developing responsive, mobile first projects on the web.
 aldeed:autoform: Easily create forms with automatic insert and update, and automatic reactive validation.
 aldeed:simple-schema: A simple schema validation object with reactivity. Used by collection2 and autoform.
@@ -103,6 +104,7 @@ check: Check whether a value matches a pattern
 iron:router 
 
 Possible integrations:
+----------------------
 hubot to automate creating and scheduling events, discovering videos, posting updates to Meetup.com, posting artifacts to Meetup.com etc. Right now, there isn't an adapter for Meetup, so this is a contribution we could make to npm and to Atmosphere
 
 
