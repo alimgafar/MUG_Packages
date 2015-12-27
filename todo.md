@@ -15,20 +15,21 @@ Who the user is | What the user can do
 
 ###General Public
 
-This isn't that fantastic ska band from the 80s that formed the breakup of *The English Beat* from the '80s. This user class describes the unregistered and uncommitted user people who find the site through searches and serendipity. There will be areas of the site that will allow them to discover the mission of the site and allow them limited interaction.
+This isn't that fantastic ska band from the '80s that formed after the breakup of *The English Beat.* This user class describes the unregistered and uncommitted people who find the site through searches and serendipity. There will be areas that will allow them to discover the mission of and provide limited interaction with the site.
 
-It it possible, but unlikely that someone from the **General Public** would be a speaker or presenter. (S)he may start out that way, but in order to manage workflow well, (s)he would have to register and log into the system. Speakers, tutors, and presenters have pre-event, event, and post-event responsibilities, especially for DevShop.
+It is possible, but unlikely that someone from the **General Public** would be a speaker or presenter. (S)he may start out that way, but in order to manage workflow, (s)he would have to register and log into the system. Speakers, tutors, and presenters have pre-event, event, and post-event responsibilities, especially for DevShop.
 
 ###Members
 
 Nearly all of our expected **Member** users will be Meetup users, and so we will implement the *accounts-meetup* package. These are distinct from **Third-party Providers** who are typically parties that are interested in providing services to the members.
 
-**Members** are classified as participants who have a (largely) direct interest in the interactions and exchanges of the group. These are people who are interested in or have information to share about MeteorJS in terms of its technical capabilities or implementation consequences. Some **Members** are product owners. They may be interested in what Meteor offers and in finding resouces who are able to use Meteor. They may have built their product or companies on MeteorJS but are not be technical themselves. Others still may simply be interested in showing what they've used Meteor to accomplish. **Members** may want to share what they know with the community by speaking or presenting at an event. In some cases, **Members** may offer to lead a class to teach what they know at one of the events. 
-
+**Members** are classified as participants who have direct interest in the interactions and exchanges of the group. These are people who are curious or have information to share about MeteorJS in terms of its technical capabilities or implementation consequences. Some **Members** are product owners. They may be interested in what Meteor offers and in finding resouces who are able to use Meteor. They may have built their product or companies on Meteor but are not be technical themselves. Others still may simply be interested in showing what they've used Meteor to accomplish. **Members** may want to share what they know with the community by speaking or presenting at an event. In some cases, **Members** may offer to lead a class to teach what they know at one of the events. 
 
 ####Meetup Member
 
-All **Meetup Members** are identified by login credentials. That is to say, acknowleged site members confirm their role by registering at eXoPlanet. However, people who meet the **Member** definition but don't register will not access the full privileges afforded registered members. They will have access to all aspects of the site available to the **General Public.** We will have to consider their concerns and desires as we shape information available to the **General Public.**
+> I am not sure that this actually meets the "who" criteria. 
+
+All **Meetup Members** are identified by login credentials. That is to say, acknowleged site members confirm their role by registering at the website. However, people who meet the **Member** definition but don't register will not access the full privileges afforded registered members. They will have access to all aspects of the site available to the **General Public.** We will have to consider their concerns and desires as we shape information available to the **General Public.**
 
 All **Meetup Members** have the attributes found in **Members** (above).
 
