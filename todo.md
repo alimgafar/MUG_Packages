@@ -133,7 +133,7 @@ MeteorJS uses MongoDB natively as its data store. MongoDB recoomnends structurin
 * *TBD*
 
 ###Presenter
-* How many talks did speaker xxx give? What were they?
+* How many talks did speaker *xxx* give? What were they?
 
 
 ###Vendor
@@ -165,7 +165,7 @@ At a very high level, we'll group our main entities into MongoDB collections.
 Package Name | Description | Used How/Where
 ------------ | ----------- | --------------
 accounts-base | A user account system. | *TBD*          
-accounts-meetup | Login service for Meetup accounts | *TBD* 
+accounts-meetup | Login service for Meetup accounts | Since nearly all of our expected users will be from the Meetup, we'll use this package to for single sign-on. 
 accounts-password | Password support for accounts. | *TBD* 
 accounts-ui | Simple templates to add login widgets to an app | *TBD*  
 check | Check whether a value matches a pattern | *TBD* 
@@ -183,7 +183,13 @@ twbs:bootstrap | The most popular front-end framework for developing responsive,
 
 ##Possible Integrations
 
-***hubot*** to automate creating and scheduling events, discovering videos, posting updates to Meetup.com, posting artifacts to Meetup.com etc. Right now, there isn't an adapter for Meetup, so this is a contribution we could make to npm and to Atmosphere
+***hubot*** to automate creating and scheduling events, discovering videos, posting updates to Meetup.com, posting artifacts to Meetup.com etc. Right now, there isn't an adapter for Meetup, so this is a contribution we could make to npm and to Atmosphere.
+
+Google documents, Google Drive.
+
+Dropbox, Box.
+
+Mailchimp, Mandrill.
 
 
 ##Hopes & Dreams
