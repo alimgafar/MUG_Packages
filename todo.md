@@ -189,7 +189,8 @@ twbs:bootstrap | The most popular front-end framework for developing responsive,
 ##Hopes & Dreams
 
 ###Iron Router and Flow Router
-I'm writing this application in Iron Router. However, I'd like to see this application written for both Iron Router and Flow Router. In the same application. One app, but two different ways to experience it. Perhaps this is something that can be dicussed and figured out. Perhaps not. However, since eXoPlanet is intended to be something that showcases Meteor and is written in Meteor, it would be pretty cool to do this. >I think alanning has written small apps that utilize both routers in a single application. But I could be wrong; it's worth following up and checking out his code.
+I'm writing this application in Iron Router. However, I'd like to see this application written for both Iron Router and Flow Router. In the same application. One app, but two different ways to experience it. Perhaps this is something that can be dicussed and figured out. Perhaps not. However, since eXoPlanet is intended to be something that showcases Meteor and is written in Meteor, it would be pretty cool to do this. 
+>I think alanning has written small apps that utilize both routers in a single application. But I could be wrong; it's worth following up and checking out his code.
 
 
 ###React Native
