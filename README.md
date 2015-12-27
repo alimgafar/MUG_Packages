@@ -20,6 +20,7 @@ Meteor-NY purchases services from vendors in both an ad hoc and recurring basis.
 ##Events
 
 Meteor-NY host four event types now:
+
 1. Meteor Hack Night (monthly)
 2. DevShop-NY (monthly)
 3. Ladies' Hack Night (*monthly*)
