@@ -72,7 +72,10 @@ TBD
 
 TBD
 
-##Roles:
+
+> Roles was a separate section before, but I think its really embedded in User Classes. In any case, Speaker, Sponsor, Vendor, etc. were not originally considered.
+
+##Roles
 
 Members: Default is they have view privileges to members and public spaces. Exception: can submit suggestions for special events and presentations. Exception: can communicate with organizers or admins through chat interface. Exception: can vote on suggestions for events or presentations.
 
@@ -80,7 +83,22 @@ Organizers: Same rights as Members. They have view access to Organizers spaces. 
 
 Administrators: All rights of Organizers. They mave full (add, modify, delete) access to all spaces. Can schedule and re-schedule events as desired. Can add, modify, and delete locations. Can approve Sponsors. Can create sponsorship 
 
+##Business rules
 
+* All records persist in the database; delete flag is used to indicate a removed record.
+* User records are encrypted in the database.
+* Decryption happens on the server. (Public/Private Key??)
+* An event may have 0 or more talks or presentations.
+* A talk or presentation can be proposed without attaching a speaker to it or without it being attached to an event.
+* A talk or presentation can later be attached to a speaker or an event.
+* A talk or presentation can be rescheduled to a different event.
+* A talk or presentation can be assigned to a different speaker.
+* More than one speaker may be attached to a talk or presentation.
+* There is the concept of talk topics.
+* Only organizers may be administrators.
+* Any member may be a speaker.
+* A speaker does not have to be a member.
+* A member may claim to be a speaker, but this must be confirmed by an administrator.
 
 ##Queries to Consider
 
@@ -88,91 +106,44 @@ Administrators: All rights of Organizers. They mave full (add, modify, delete) a
 
 MeteorJS uses MongoDB natively as its data store. MongoDB recoomnends structuring documents (i.e. your records) in each collection based on expected access patterns. That's something of a tall order when an application is evolving and you're not sure how it will be used. 
 
-What events does this meetup provide? When are they held?
+###Events
+* What events does this meetup provide? When are they held?
+* Who were the speakers at the last event?
+* How many speakers were at the last event?
+* How many talks were at the last event?
+* Give me a location's details -- name requirements, floor, security, arrival requirements (allowed early, etc.)
 
-Who were the speakers at the last event?
-
-HOw many speakers were at the last event?
-
-How many talks were at the last event?
-
-How many talks did speaker xxx give? What were they?
-
-Show me a list of the conversations I had with xxx.
-
-Sow me the list of people I chatted with today, yesterday, this week, last week, last month, last quarter, last year
-
-Show me a list of activities (talks) planned for the next event
-
-Show me a list of all future activities (talks) arranged by year, month, and event
-
-Show me a list of all future speakers (preseneter) arranged by year, month, event, and presentation title
-
-Who are the organizeers? How do I get in touch with them?
-
-Show me a list of the organizers.
-
-Show me an organizer's bio.
-
-Show me a list of event locations.
-
-Give me a location's details -- name requirements, floor, security, arrival requirements (allowed early, etc.)
-
-A talk or presentation can be proposed without attaching a speaker to it or without it being attached to an event.
-
-A talk or presentation can later be attached to a speaker or an event.
-
-A talk or presentation can be rescheduled to a different event.
-
-A talk or presentation can be assigned to a different speaker.
-
-More than one speaker may be attached to a talk or presentation.
-
-There is the concept of talk topics.
 
 ###Administrative
-
-Only organizers may be administrators.
-
-An event may have 0 or more talks or presentations.
-
-Any member may be a speaker.
-
-A speaker does not have to be a member.
-
-A member may claim to be a speaker, but this must be confirmed by an administrator.
+* *TBD*
 
 ###Operational
-All records persist in the database; delete flag is used to indicate a removed record.
-
-User records are encrypted in the database.
-
-Decryption happens on the server. (Public/Private Key??)
+* Show me a list of the conversations I had with *xxx.*
+* Show me the list of people I chatted with today, yesterday, this week, last week, last month, last quarter, last year
+* Show me a list of activities (talks) planned for the next event
+* Show me a list of all future activities (talks) arranged by year, month, and event
+* Show me a list of all future speakers (preseneter) arranged by year, month, event, and presentation title
+* Who are the organizers? How do I get in touch with them?
+* Show me a list of the organizers.
+* Show me an organizer's bio.
+* Show me a list of event locations.
 
 
 ###User (Meetup Member)
+* *TBD*
 
-
-###Speaker
-
-
-###Instructor
+###Presenter
+* How many talks did speaker xxx give? What were they?
 
 
 ###Vendor
-
+* *TBD*
 
 ###Sponsor
-Show me a list of sponsors.
-
-What does sponsor xxx provide?
-
-SHow me a list of sponsorship opportunities.
-
-How do I sign up for sponsorship?
-
-
-
+* Show me a list of sponsors.
+* What does sponsor *xxx* provide?
+* Show me a list of sponsorship opportunities.
+* How do I sign up for sponsorship?
 
 
 
@@ -180,40 +151,50 @@ How do I sign up for sponsorship?
 
 At a very high level, we'll group our main entities into MongoDB collections. 
 
-*Sponsors
-*Speakers
-*Events
-*Location
-*Vendors
-*Employers
-*Presentation
+* Sponsors
+* Speakers
+* Events
+* Location
+* Vendors
+* Employers
+* Presentation
 
 
-##Packages Used
+##Packages Considered and Installed
 
 Package Name | Description | Used How/Where
 ------------ | ----------- | --------------
-accounts-base | A user account system. | TBD          
-accounts-meetup | Login service for Meetup accounts | TBD
-accounts-password | Password support for accounts. | TBD
-accounts-ui | Simple templates to add login widgets to an app | TBD 
-check | Check whether a value matches a pattern | TBD
-http | Make HTTP calls to remote servers | TBD      
-iron:router | Routing specifically designed for Meteor | TBD
-alanning:roles | Authorization package for Meteor. | TBD
-aldeed:autoform | Easily create forms with automatic insert and update, and automatic reactive validation. | TBD
-aldeed:collection2 | Automatic validation of insert and update operations on the client and server. | TBD
-aldeed:http | Improves the core HTTP package | TBD
-aldeed:scheduled-tasks | Run a function on a schedule. | TBD
-aldeed:simple-schema | A simple schema validation object with reactivity. Used by collection2 and autoform. | TBD
-houston:admin | A zero-config Meteor Admin. | TBD     
-mrt:flash-messages | A package to display flash messages to the user | TBD
-twbs:bootstrap | The most popular front-end framework for developing responsive, mobile first projects on the web. | TBD
+accounts-base | A user account system. | *TBD*          
+accounts-meetup | Login service for Meetup accounts | *TBD* 
+accounts-password | Password support for accounts. | *TBD* 
+accounts-ui | Simple templates to add login widgets to an app | *TBD*  
+check | Check whether a value matches a pattern | *TBD* 
+http | Make HTTP calls to remote servers | *TBD*       
+iron:router | Routing specifically designed for Meteor | *TBD* 
+alanning:roles | Authorization package for Meteor. | *TBD* 
+aldeed:autoform | Easily create forms with automatic insert and update, and automatic reactive validation. | *TBD* 
+aldeed:collection2 | Automatic validation of insert and update operations on the client and server. | *TBD* 
+aldeed:http | Improves the core HTTP package | *TBD* 
+aldeed:scheduled-tasks | Run a function on a schedule. | *TBD* 
+aldeed:simple-schema | A simple schema validation object with reactivity. Used by collection2 and autoform. | *TBD* 
+houston:admin | A zero-config Meteor Admin. | *TBD*      
+mrt:flash-messages | A package to display flash messages to the user | *TBD* 
+twbs:bootstrap | The most popular front-end framework for developing responsive, mobile first projects on the web. | *TBD* 
 
-##Possible integrations
+##Possible Integrations
 
 ***hubot*** to automate creating and scheduling events, discovering videos, posting updates to Meetup.com, posting artifacts to Meetup.com etc. Right now, there isn't an adapter for Meetup, so this is a contribution we could make to npm and to Atmosphere
 
+
+##Hopes & Dreams
+
+###Iron Router and Flow Router
+I'm writing this application in Iron Router. However, I'd like to see this application written for both Iron Router and Flow Router. In the same application. One app, but two different ways to experience it. Perhaps this is something that can be dicussed and figured out. Perhaps not. However, since eXoPlanet is intended to be something that showcases Meteor and is written in Meteor, it would be pretty cool to do this. >I think alanning has written small apps that utilize both routers in a single application. But I could be wrong; it's worth following up and checking out his code.
+
+
+###React Native
+
+Likewise, I'd like to take the first pass of this application and build it to use React Native too. Again, can we get away with having two different front ends? One in Blaze (the way I'm building it now) and one in React Native? Folks, I'll need answers and a clear discussion on the whys and wherefores.
 
 
 
